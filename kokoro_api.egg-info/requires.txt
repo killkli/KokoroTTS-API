@@ -9,3 +9,4 @@ pypinyin
 cn2an
 jieba
 pypinyin_dict
+en-core-web-sm
