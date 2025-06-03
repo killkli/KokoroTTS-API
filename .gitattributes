@@ -1,0 +1,2 @@
+kokoro-v1.1-zh.onnx filter=lfs diff=lfs merge=lfs -text
+voices-v1.1-zh.bin filter=lfs diff=lfs merge=lfs -text
