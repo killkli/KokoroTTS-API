@@ -105,7 +105,10 @@ async def synthesize_speech(synthesis_request: SynthesisRequest, request: Reques
                 speed = 1 - (len_ps - 83) / 500
             return speed * 1.1
 
-        generator = pipeline(synthesis_request.text, voice=synthesis_request.speaker_id, speed=speed_callable)
+        SPEAKER_ID = VOICE
+        if synthesis_request.speaker_id:
+            SPEAKER_ID = synthesis_request.speaker_id
+        generator = pipeline(synthesis_request.text, voice=SPEAKER_ID, speed=speed_callable)
         result = next(generator)
         wav = result.audio
 
