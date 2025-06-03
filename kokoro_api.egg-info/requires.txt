@@ -3,3 +3,9 @@ uvicorn
 kokoro>=0.8.2
 misaki>=0.8.2
 soundfile
+pip
+ordered_set
+pypinyin
+cn2an
+jieba
+pypinyin_dict
