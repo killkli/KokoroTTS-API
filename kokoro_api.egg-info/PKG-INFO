@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: kokoro-api
+Version: 0.1.0
+Summary: API service for the Kokoro Text-to-Speech model.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: kokoro>=0.8.2
+Requires-Dist: misaki>=0.8.2
+Requires-Dist: soundfile

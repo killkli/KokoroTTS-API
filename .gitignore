@@ -1,0 +1,31 @@
+# Python
+.Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.env
+venv/
+env/
+
+# IDEs
+.idea/
+.vscode/
+
+# Editor
+*.swp
+*.bak
+*.swo
+
+# OS generated files
+.DS_Store
+.Trashes
+Thumbs.db
+
+# Misc
+.pytest_cache/
+.coverage
+htmlcov/
+.nox/
+.mypy_cache/
+.ruff_cache/

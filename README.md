@@ -1,0 +1,81 @@
+# Kokoro TTS API
+
+## Project Purpose/Description
+This project provides an API service for the Kokoro Text-to-Speech (TTS) model. It allows users to synthesize speech from text using various available voices.
+
+## Technologies Used
+*   **Python**
+*   **FastAPI**: Web framework for building the API.
+*   **Uvicorn**: ASGI server for running the FastAPI application.
+*   **Kokoro**: The core Text-to-Speech model.
+*   **Misaki**: A dependency of Kokoro, likely for phoneme processing.
+*   **Soundfile**: For handling audio file operations (specifically WAV).
+*   **PyTorch**: Used for leveraging GPU (CUDA) or CPU for model inference.
+
+## Installation and Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd kokoro-api # Or whatever your project directory is named
+    ```
+
+2.  **Create and activate a virtual environment (recommended):**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate # On Windows: `venv\Scripts\activate`
+    ```
+
+3.  **Install dependencies:**
+    The project uses `pyproject.toml` for dependency management. You can install all required packages using pip:
+    ```bash
+    pip install .
+    ```
+    This will install `fastapi`, `uvicorn`, `kokoro`, `misaki`, and `soundfile`.
+
+## How to Run
+
+To start the API server, run the `main.py` file using uvicorn:
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+Alternatively, you can run the `main.py` directly:
+
+```bash
+python main.py
+```
+
+The API will be available at `http://0.0.0.0:8000`.
+
+## API Endpoints
+
+Once the server is running, you can access the following endpoints:
+
+*   **GET `/`**:
+    Returns a simple welcome message to confirm the API is running.
+    Example Response: `{"message": "Kokoro TTS API is running!"}`
+
+*   **GET `/voices`**:
+    Returns a list of available speaker IDs that can be used for speech synthesis.
+    Example Response: `{"voices": ["zf_001", "zf_002", ...]}`
+
+*   **POST `/tts/synthesize`**:
+    Synthesizes speech from the provided text.
+    **Request Body (JSON):**
+    ```json
+    {
+        "text": "Hello, this is a test.",
+        "speaker_id": "zf_001",  // Optional: A speaker ID from the /voices endpoint
+        "language": "en"          // Optional: Defaults to "en" (English)
+    }
+    ```
+    **Response:**
+    An `audio/wav` file containing the synthesized speech.
+
+## Contributing
+No specific contributing guidelines are currently defined.
+
+## License
+No license information was found in the project files.

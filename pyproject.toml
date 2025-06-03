@@ -1,0 +1,14 @@
+[project]
+name = "kokoro-api"
+version = "0.1.0"
+description = "API service for the Kokoro Text-to-Speech model."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "kokoro>=0.8.2",
+    "misaki>=0.8.2",
+    "soundfile",
+]
+

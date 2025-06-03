@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+kokoro_api.egg-info/PKG-INFO
+kokoro_api.egg-info/SOURCES.txt
+kokoro_api.egg-info/dependency_links.txt
+kokoro_api.egg-info/requires.txt
+kokoro_api.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+kokoro>=0.8.2
+misaki>=0.8.2
+soundfile
